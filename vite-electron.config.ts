@@ -25,6 +25,14 @@ export default defineConfig((config) => {
     build: {
       target: 'esnext',
     },
+    ssr: {
+      noExternal: ['react-dom'],
+    },
+    resolve: {
+      alias: {
+        'react-dom/server': 'react-dom/server.browser',
+      },
+    },
     plugins: [
       nodePolyfills({
         include: ['path', 'buffer', 'process'],

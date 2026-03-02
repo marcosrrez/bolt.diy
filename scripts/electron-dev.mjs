@@ -118,7 +118,7 @@ async function startElectronDev() {
 
     // 2. Start Remix development server
     console.log('🌐 Starting Remix development server...');
-    remixProcess = spawn('pnpm', ['dev'], {
+    remixProcess = spawn('pnpm', ['dev:electron'], {
       stdio: 'pipe',
       env: { ...process.env },
     });
